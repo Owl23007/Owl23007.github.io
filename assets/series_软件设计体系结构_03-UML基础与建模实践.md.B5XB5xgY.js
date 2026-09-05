@@ -1,0 +1,207 @@
+import{f as a,o as s,c as i,aj as n}from"./chunks/framework.CJTJR_Xv.js";const e="/assets/%E6%B3%B3%E9%81%93%E5%9B%BE.D1y1nMX-.png",l="/assets/%E7%AE%80%E5%8D%95%E7%94%A8%E4%BE%8B%E5%9B%BE%E7%A4%BA%E4%BE%8B.Cn6S9xdl.png",m=JSON.parse('{"title":"第三章 UML 基础与建模实践","description":"UML基础知识、各类图表的使用方法及如何用UML表达设计模式。","frontmatter":{"title":"第三章 UML 基础与建模实践","date":"2025-11-19T00:00:00.000Z","description":"UML基础知识、各类图表的使用方法及如何用UML表达设计模式。"},"headers":[],"relativePath":"series/软件设计体系结构/03-UML基础与建模实践.md","filePath":"series/软件设计体系结构/03-UML基础与建模实践.md","lastUpdated":1788599939000}'),r={name:"series/软件设计体系结构/03-UML基础与建模实践.md"};function o(d,t,g,h,p,c){return s(),i("div",null,t[0]||(t[0]=[n(`<h1 id="第三章-uml-基础与建模实践" tabindex="-1">第三章 UML 基础与建模实践 <a class="header-anchor" href="#第三章-uml-基础与建模实践" aria-label="Permalink to &quot;第三章 UML 基础与建模实践&quot;">​</a></h1><h2 id="_3-1-uml-简介与应用场景" tabindex="-1">3.1 UML 简介与应用场景 <a class="header-anchor" href="#_3-1-uml-简介与应用场景" aria-label="Permalink to &quot;3.1 UML 简介与应用场景&quot;">​</a></h2><p>UML（Unified Modeling Language，统一建模语言）是一种标准化的可视化建模语言，由OMG（Object Management Group）维护。它提供了一套图形化的符号系统，用于描述、设计和文档化软件系统。</p><h3 id="uml-图分为两大类" tabindex="-1"><strong>UML 图分为两大类</strong> <a class="header-anchor" href="#uml-图分为两大类" aria-label="Permalink to &quot;**UML 图分为两大类**&quot;">​</a></h3><h4 id="_1-结构图-structural-diagrams" tabindex="-1"><strong>1. 结构图（Structural Diagrams）</strong> <a class="header-anchor" href="#_1-结构图-structural-diagrams" aria-label="Permalink to &quot;**1. 结构图（Structural Diagrams）**&quot;">​</a></h4><p>用于描述系统的静态结构，即组成系统的元素及其关系。</p><ul><li><strong>类图（Class Diagram）</strong>：展示类、接口、抽象类及其之间的关系（如继承、实现、关联、聚合、组合等）。</li><li><strong>对象图（Object Diagram）</strong>：展示某一时刻系统中对象实例及其之间的链接关系，可看作类图的运行时快照。</li><li><strong>组件图（Component Diagram）</strong>：展示系统中可替换的物理或逻辑组件及其接口和依赖关系。</li><li><strong>部署图（Deployment Diagram）</strong>：描述系统的物理部署结构，包括硬件节点和软件制品（artifacts）的部署关系。</li><li><strong>包图（Package Diagram）</strong>：展示系统中包（namespace）之间的依赖关系，用于组织和管理模型元素。</li><li><strong>组合结构图（Composite Structure Diagram）</strong>：展示类内部的结构，包括其组成部分（part）及端口（port）等，用于描述协作内部结构。</li></ul><hr><h4 id="_2-行为图-behavioral-diagrams" tabindex="-1"><strong>2. 行为图（Behavioral Diagrams）</strong> <a class="header-anchor" href="#_2-行为图-behavioral-diagrams" aria-label="Permalink to &quot;**2. 行为图（Behavioral Diagrams）**&quot;">​</a></h4><p>用于描述系统的动态行为，即系统如何随时间变化或响应事件。</p><ul><li><strong>用例图（Use Case Diagram）</strong>：展示系统功能（用例）与外部参与者（Actor）之间的关系。</li><li><strong>活动图（Activity Diagram）</strong>：描述业务流程或操作的工作流，类似流程图，但支持并发等高级语义。</li><li><strong>状态机图（State Machine Diagram，简称状态图）</strong>：展示一个对象在其生命周期内所经历的状态及状态之间的转换。</li><li><strong>时序图（Sequence Diagram）</strong>：强调对象之间消息传递的<strong>时间顺序</strong>，是最常用的交互图。</li><li><strong>通信图（Communication Diagram，旧称协作图）</strong>：强调对象之间的<strong>结构关系</strong>，同时展示消息交互（与时序图互补）。</li><li><strong>交互概览图（Interaction Overview Diagram）</strong>：结合活动图和顺序图，用活动节点表示交互流程。</li></ul><blockquote><p><strong>时序图、通信图、交互概览图、时序图</strong>等都属于 <strong>交互图（Interaction Diagrams）</strong> 的子类，但“交互图”本身是行为图下的一个<strong>子类别</strong>，<strong>不是独立的一种图</strong>。</p></blockquote><div class="tip custom-block"><p class="custom-block-title">TIP</p><p><strong>交互图（Interaction Diagrams）</strong> 是 UML 中对<strong>强调对象间消息传递</strong>的一类图的统称，包括时序图、通信图等，<strong>不是与用例图并列的独立图类型</strong>。</p></div><hr><p>当然可以，以下是对你提供的 UML 核心特点与应用场景内容的扩展，尤其在<strong>代码生成</strong>方面做了更详细的补充，并保持整体风格一致：</p><hr><h3 id="核心特点" tabindex="-1">核心特点 <a class="header-anchor" href="#核心特点" aria-label="Permalink to &quot;核心特点&quot;">​</a></h3><ul><li><strong>标准化</strong>：UML 定义了一套统一的图形符号和语义规范，确保不同背景的团队成员（如架构师、开发、测试、产品经理）对系统模型有一致的理解，减少沟通歧义。</li><li><strong>可视化</strong>：通过类图、时序图、状态图等图形化手段，将抽象的软件结构和行为具象化，使复杂逻辑和交互流程一目了然，尤其适用于大型或分布式系统。</li><li><strong>多视图</strong>：UML 支持从多个维度刻画系统： <ul><li><strong>结构视图</strong>（如类图、对象图、组件图）描述系统的静态组成；</li><li><strong>行为视图</strong>（如用例图、活动图、状态机图）刻画系统动态行为；</li><li><strong>交互视图</strong>（如时序图、通信图）聚焦对象间的消息传递；</li><li><strong>部署视图</strong>（如部署图）展示软硬件的物理部署结构。</li></ul></li><li><strong>工具支持</strong>：主流建模工具（如 StarUML、PlantUML、Lucidchart、mermaid）均支持 UML 标准，提供图形编辑、版本管理、协作评审甚至与 IDE 集成的能力。</li></ul><hr><h3 id="应用场景" tabindex="-1">应用场景 <a class="header-anchor" href="#应用场景" aria-label="Permalink to &quot;应用场景&quot;">​</a></h3><ul><li><strong>系统设计与分析</strong>：在编码前通过 UML 进行领域建模和架构设计，提前发现设计缺陷，明确模块职责与关系，为后续开发奠定清晰基础。</li><li><strong>团队沟通</strong>：作为跨职能团队的“通用语言”，UML 图能有效弥合业务需求与技术实现之间的鸿沟，提升协作效率。</li><li><strong>文档记录</strong>：UML 模型可自动导出为设计文档，便于知识沉淀、新人上手和后期维护，避免“代码即文档”带来的理解成本。</li><li><strong>代码生成</strong>： 有 UML 工具支持<strong>正向工程（Forward Engineering）</strong>，即根据类图、状态图等自动生成对应编程语言的代码框架（如 Java、C#、Python）。例如： <ul><li>从类图生成包含属性、方法签名和关联关系的类骨架；</li><li>从状态图生成状态机模板代码；</li><li>支持自定义模板（如 Velocity、Freemarker）以适配特定项目规范。 此外，部分工具还支持<strong>逆向工程（Reverse Engineering）</strong>，可从现有代码反向生成 UML 图，便于理解遗留系统或进行重构分析。</li></ul></li></ul><hr><h2 id="_3-2-类图-class-diagram-结构建模核心" tabindex="-1">3.2 类图（Class Diagram）：结构建模核心 <a class="header-anchor" href="#_3-2-类图-class-diagram-结构建模核心" aria-label="Permalink to &quot;3.2 类图（Class Diagram）：结构建模核心&quot;">​</a></h2><p>类图是UML中最常用的图，用于展示系统的静态结构，包括类、接口、属性、方法以及它们之间的关系。</p><h3 id="类的基本表示" tabindex="-1">类的基本表示 <a class="header-anchor" href="#类的基本表示" aria-label="Permalink to &quot;类的基本表示&quot;">​</a></h3><pre class="mermaid mermaid-36">classDiagram
+    class User {
+        -userId: String
+        -username: String
+        -email: String
+        +login(password: String): Boolean
+        +updateProfile(data: Map): void
+        +getFullName(): String
+    }</pre><div class="language-plaintext vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">plaintext</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span>classDiagram</span></span>
+<span class="line"><span>    class User {</span></span>
+<span class="line"><span>        -userId: String             // 私有属性</span></span>
+<span class="line"><span>        -username: String</span></span>
+<span class="line"><span>        -email: String</span></span>
+<span class="line"><span>        +login(password: String): Boolean  // 公有方法</span></span>
+<span class="line"><span>        +updateProfile(data: Map): void</span></span>
+<span class="line"><span>        +getFullName(): String</span></span>
+<span class="line"><span>    }</span></span></code></pre></div><p>在这个图中，User类有4个属性（userId、username、email），3个方法（login、updateProfile、getFullName），以及一个构造函数。</p><p>图框分为三个部分：</p><ul><li>类名</li><li>属性列表</li><li>方法列表</li></ul><p>其中，属性列表与方法列表中的每一行表示一个属性或方法，前面的符号表示可见性：</p><ul><li><code>+</code>：公有（public）</li><li><code>-</code>：私有（private）</li><li><code>#</code>：受保护的（protected）</li></ul><p><code>updateProfile(data: Map): void</code> 中<code>data: Map</code>参数是一个Map类型，表示更新用户的数据。<code>void</code>表示该方法的返回值类型。</p><hr><h3 id="uml-图的关系详解" tabindex="-1">UML 图的关系详解 <a class="header-anchor" href="#uml-图的关系详解" aria-label="Permalink to &quot;UML 图的关系详解&quot;">​</a></h3><p>在面向对象设计中，类与类、类与接口之间通过特定的语义关系相互协作。这些关系不仅定义了代码的静态结构，也深刻影响系统的可维护性、可扩展性与复用能力。</p><p>根据 UML（统一建模语言）规范，常见的结构化与行为依赖关系可归纳为以下 <strong>六种</strong>，按其语义和建模目的分类如下：</p><h4 id="结构关系分类" tabindex="-1">结构关系分类 <a class="header-anchor" href="#结构关系分类" aria-label="Permalink to &quot;结构关系分类&quot;">​</a></h4><h5 id="_1-类与类之间的关系-5-种" tabindex="-1">1. 类与类之间的关系（5 种） <a class="header-anchor" href="#_1-类与类之间的关系-5-种" aria-label="Permalink to &quot;1. 类与类之间的关系（5 种）&quot;">​</a></h5><ul><li><strong>继承（Generalization / Inheritance）</strong> 表示 “is-a” 关系，子类泛化父类的行为与属性。</li><li><strong>关联（Association）</strong> 表示两个类之间存在长期的结构化引用（如成员变量），通常为双向或单向持有。 <ul><li><strong>普通关联</strong>：基础引用关系，无生命周期绑定。</li><li><strong>聚合（Aggregation）</strong>：弱“拥有”关系（“has-a”），部分可独立于整体存在。</li><li><strong>组合（Composition）</strong>：强“拥有”关系（“owns-a”），部分生命周期完全依赖整体。</li></ul></li><li><strong>依赖（Dependency）</strong> 表示一个类在局部（如方法参数、临时变量或静态调用）使用另一个类，耦合最弱。</li></ul><div class="tip custom-block github-alert"><p class="custom-block-title">TIP</p><p>聚合与组合是<strong>关联的两种特殊形式</strong>，用于表达“整体-部分”关系的强弱，而非独立于关联之外的关系。</p></div><h5 id="_2-类与接口之间的关系-1-种" tabindex="-1">2. 类与接口之间的关系（1 种） <a class="header-anchor" href="#_2-类与接口之间的关系-1-种" aria-label="Permalink to &quot;2. 类与接口之间的关系（1 种）&quot;">​</a></h5><ul><li><strong>实现（Realization）</strong> 表示类履行接口所定义的契约（如 Java 中的 <code>implements</code>），是多态与解耦的关键机制。</li></ul><p>此外，<strong>接口与接口之间</strong>也存在<strong>继承（Generalization）</strong>（如 <code>interface B extends A</code>），但该关系不属于“类与类”或“类与接口”的范畴，此处不计入六种核心关系。</p><hr><h4 id="_1-继承关系-inheritance-generalization" tabindex="-1">1. 继承关系（Inheritance / Generalization） <a class="header-anchor" href="#_1-继承关系-inheritance-generalization" aria-label="Permalink to &quot;1. 继承关系（Inheritance / Generalization）&quot;">​</a></h4><p>表示 “is-a” 关系，子类继承父类的属性和行为，卡车是一个载具。</p><pre class="mermaid mermaid-37">classDiagram
+    class Vehicle {
+        +start()
+        +stop()
+    }
+
+    class Car {
+        +openSunroof()
+    }
+
+    class Truck {
+        +loadCargo()
+    }
+
+    Vehicle &lt;|-- Car
+    Vehicle &lt;|-- Truck</pre><ul><li><strong>UML 语义</strong>：泛化（Generalization）</li><li><strong>Java 示例</strong>：<code>class Car extends Vehicle</code></li><li><strong>关系箭头</strong>：<code>&lt;|--</code> 空心三角箭头 + 实线，指向父类</li></ul><hr><h4 id="_2-实现关系-realization" tabindex="-1">2. 实现关系（Realization） <a class="header-anchor" href="#_2-实现关系-realization" aria-label="Permalink to &quot;2. 实现关系（Realization）&quot;">​</a></h4><p>表示类实现接口定义的契约，即 “implements”。</p><pre class="mermaid mermaid-38">classDiagram
+    class PaymentMethod {
+        +processPayment(amount: Double): Boolean
+    }
+
+    class CreditCard {
+        -cardNumber: String
+        +processPayment(amount: Double): Boolean
+    }
+
+    class Cash {
+        +processPayment(amount: Double): Boolean
+    }
+
+    CreditCard ..|&gt; PaymentMethod
+    Cash ..|&gt; PaymentMethod</pre><p><strong>关系箭头</strong>：箭头方向为 <strong>类 → 接口</strong>，使用 <code>..|&gt;</code> 表示虚线+空心三角（实现）。</p><hr><h4 id="_3-关联关系-association" tabindex="-1">3. 关联关系（Association） <a class="header-anchor" href="#_3-关联关系-association" aria-label="Permalink to &quot;3. 关联关系（Association）&quot;">​</a></h4><p>关联关系表示两个类之间存在<strong>结构化引用</strong>（如成员变量），通常为长期关系。它是类与类之间最常见的关系之一。</p><pre class="mermaid mermaid-39">classDiagram
+    class University {
+        -name: String
+        +addDepartment(deptName: String)
+    }
+
+    class Department {
+        -name: String
+        +addProfessor(p: Professor)
+        +removeProfessor(p: Professor)
+    }
+
+    class Professor {
+        -name: String
+    }
+
+    University *-- &quot;*&quot; Department : contains &gt;
+    Department o-- &quot;*&quot; Professor : employs &gt;</pre><h5 id="聚合与组合" tabindex="-1">聚合与组合 <a class="header-anchor" href="#聚合与组合" aria-label="Permalink to &quot;聚合与组合&quot;">​</a></h5><p>聚合与组合是<strong>关联的两种特殊形式</strong>（下文有更详细的讲解），用于表达“整体-部分”关系的强弱：</p><ul><li><strong>聚合（Aggregation）</strong>：弱“拥有”关系，部分可以独立于整体存在。</li><li><strong>组合（Composition）</strong>：强“拥有”关系，部分的生命周期由整体控制。</li></ul><h5 id="uml-表达" tabindex="-1">UML 表达 <a class="header-anchor" href="#uml-表达" aria-label="Permalink to &quot;UML 表达&quot;">​</a></h5><ul><li><strong>普通关联</strong>：用实线表示，带箭头 <code>--&gt;</code> 表示单向关联，不带箭头 <code>--</code> 表示双向关联。</li><li><strong>聚合</strong>：用空心菱形 <code>o--</code> 表示。</li><li><strong>组合</strong>：用实心菱形 <code>*--</code> 表示。</li></ul><h5 id="java-示例" tabindex="-1">Java 示例 <a class="header-anchor" href="#java-示例" aria-label="Permalink to &quot;Java 示例&quot;">​</a></h5><div class="language-java vp-adaptive-theme"><button title="Copy Code" class="copy"></button><span class="lang">java</span><pre class="shiki shiki-themes github-light github-dark vp-code" tabindex="0"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 教授类：独立存在</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Professor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> String name;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Professor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> name;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 教授可被多个院系引用，也可不隶属于任何院系</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 院系类</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Department</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> String name;</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 聚合关系：持有 Professor 引用，但不控制其生命周期</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> List&lt;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">Professor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt; professors </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ArrayList&lt;&gt;();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Department</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> name;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> addProfessor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Professor </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        professors.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(p);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 注意：移除教授时，不销毁 Professor 对象</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> removeProfessor</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(Professor </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">p</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        professors.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">remove</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(p);</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">// 大学类</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">class</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> University</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> {</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> String name;</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">    // 组合关系：University 完全拥有 Department</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    private</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> List&lt;</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">Department</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">&gt; departments </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> new</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> ArrayList&lt;&gt;();</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> University</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">name</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">        this</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">.name </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">=</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> name;</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">    public</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;"> void</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> addDepartment</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(String </span><span style="--shiki-light:#E36209;--shiki-dark:#FFAB70;">deptName</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">) {</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;">        // University 内部创建 Department（体现“拥有”）</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">        departments.</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">add</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">new</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;"> Department</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(deptName));</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    }</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><h5 id="示例补充" tabindex="-1">示例补充 <a class="header-anchor" href="#示例补充" aria-label="Permalink to &quot;示例补充&quot;">​</a></h5><pre class="mermaid mermaid-40">classDiagram
+    class Customer {
+        -name: String
+    }
+    class Order {
+        -orderId: String
+    }
+    Customer --&gt; &quot;*&quot; Order : places &gt;</pre><p>在上述示例中：</p><ul><li><code>Customer</code> 和 <code>Order</code> 之间是普通关联关系，表示一个客户可以下多个订单。</li><li>用 <code>--&gt;</code> 表示单向关联，箭头指向被引用的类。</li><li><code>&quot;*&quot;</code> 表示多对一关系，即一个客户可以下多个订单。</li></ul><hr><h4 id="_4-聚合关系-aggregation" tabindex="-1">4. 聚合关系（Aggregation） <a class="header-anchor" href="#_4-聚合关系-aggregation" aria-label="Permalink to &quot;4. 聚合关系（Aggregation）&quot;">​</a></h4><p>一种<strong>弱“拥有”关系</strong>，整体与部分可独立存在（“has-a”）。</p><pre class="mermaid mermaid-41">classDiagram
+    class Library {
+        -name: String
+        -LibraryBooks: List~Book~
+        +addBook()
+        +removeBook()
+    }
+
+    class Book {
+        -title: String
+        -author: String
+    }
+
+    Library o-- &quot;*&quot; Book : contains &gt;</pre><ul><li>空心菱形 <code>o--</code> 表示聚合</li><li><code>Book</code> 可脱离 <code>Library</code> 存在（例如被借出或转移到其他图书馆）</li></ul><hr><h4 id="_5-组合关系-composition" tabindex="-1">5. 组合关系（Composition） <a class="header-anchor" href="#_5-组合关系-composition" aria-label="Permalink to &quot;5. 组合关系（Composition）&quot;">​</a></h4><p>一种<strong>强“拥有”关系</strong>，部分生命周期由整体控制（“owns-a”）。</p><pre class="mermaid mermaid-42">classDiagram
+    class House {
+        +build()
+        +demolish()
+    }
+
+    class Room {
+        -roomNumber: String
+        -size: String
+    }
+
+    House *-- &quot;*&quot; Room : contains &gt;</pre><ul><li>实心菱形 + 实线 <code>*--</code> 表示组合</li><li><code>Room</code> 不能脱离 <code>House</code> 存在（房子被拆除，房间也随之消失）</li></ul><hr><h4 id="_6-依赖关系-dependency" tabindex="-1">6. 依赖关系（Dependency） <a class="header-anchor" href="#_6-依赖关系-dependency" aria-label="Permalink to &quot;6. 依赖关系（Dependency）&quot;">​</a></h4><p>表示一个类<strong>临时使用</strong>另一个类（如方法参数、局部变量、静态工具调用），耦合最弱。</p><pre class="mermaid mermaid-43">classDiagram
+    class Order {
+        +process()
+    }
+
+    class Logger {
+        +log(message: String)
+    }
+
+    Order ..&gt; Logger : uses &gt;</pre><ul><li>虚线+ 普通箭头 <code>..&gt;</code> 表示依赖</li><li>通常出现在方法内部，不保留长期引用</li></ul><hr><h4 id="关系总结表" tabindex="-1">关系总结表 <a class="header-anchor" href="#关系总结表" aria-label="Permalink to &quot;关系总结表&quot;">​</a></h4><table tabindex="0"><thead><tr><th>关系类型</th><th>Mermaid 符号</th><th>语义</th><th>生命周期依赖</th><th>典型场景</th></tr></thead><tbody><tr><td>继承</td><td>\`&lt;</td><td>--\`</td><td>is-a</td><td>否</td></tr><tr><td>实现</td><td>\`..</td><td>&gt;\`</td><td>implements</td><td>否</td></tr><tr><td>关联</td><td><code>--&gt;</code></td><td>uses/has</td><td>否</td><td><code>Customer</code> 持有 <code>Order</code> 列表</td></tr><tr><td>聚合</td><td><code>o--</code></td><td>has-a</td><td><strong>否</strong></td><td><code>Library</code> 包含 <code>Book</code></td></tr><tr><td>组合</td><td><code>*--</code></td><td>owns-a</td><td><strong>是</strong></td><td><code>House</code> 由 <code>Room</code> 构成</td></tr><tr><td>依赖</td><td><code>..&gt;</code></td><td>uses-a</td><td>否（临时）</td><td>调用 <code>Logger.log()</code></td></tr></tbody></table><hr><h2 id="_3-3-时序图-sequence-diagram-行为交互分析" tabindex="-1">3.3 时序图（Sequence Diagram）：行为交互分析 <a class="header-anchor" href="#_3-3-时序图-sequence-diagram-行为交互分析" aria-label="Permalink to &quot;3.3 时序图（Sequence Diagram）：行为交互分析&quot;">​</a></h2><p>时序图（Sequence Diagram）是 UML 中最常用的交互图，主要用于展示对象之间交互的<strong>时间顺序</strong>。它强调消息是如何在对象之间发送和接收的。</p><h3 id="_1-核心元素" tabindex="-1">1. 核心元素 <a class="header-anchor" href="#_1-核心元素" aria-label="Permalink to &quot;1. 核心元素&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">元素</th><th style="text-align:left;">图形符号</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>生命线 (Lifeline)</strong></td><td style="text-align:left;">虚线</td><td style="text-align:left;">表示对象在一段时间内的存在。顶部通常是矩形，包含对象名。</td></tr><tr><td style="text-align:left;"><strong>激活条 (Activation)</strong></td><td style="text-align:left;">细长矩形</td><td style="text-align:left;">表示对象正在执行某个操作或处于活动状态的时间段。</td></tr><tr><td style="text-align:left;"><strong>消息 (Message)</strong></td><td style="text-align:left;">箭头</td><td style="text-align:left;">对象之间的通信。</td></tr><tr><td style="text-align:left;"><strong>组合片段 (Fragment)</strong></td><td style="text-align:left;">矩形框</td><td style="text-align:left;">用于表示循环 (loop)、选择 (alt)、可选 (opt) 等复杂逻辑。</td></tr></tbody></table><h3 id="_2-消息类型" tabindex="-1">2. 消息类型 <a class="header-anchor" href="#_2-消息类型" aria-label="Permalink to &quot;2. 消息类型&quot;">​</a></h3><ul><li><strong>同步消息 (Synchronous Message)</strong>：实心三角箭头 <code>-&gt;</code>。发送者发送消息后，必须等待接收者处理完毕才能继续执行（阻塞）。</li><li><strong>异步消息 (Asynchronous Message)</strong>：开放箭头 <code>-&gt;&gt;</code>。发送者发送消息后，不等待接收者处理，直接继续执行（非阻塞）。</li><li><strong>返回消息 (Return Message)</strong>：虚线箭头 <code>--&gt;&gt;</code>。表示从被调用者返回结果给调用者。</li><li><strong>自关联消息 (Self Message)</strong>：指向自己的箭头。对象调用自身的方法。</li></ul><h3 id="_3-时序图示例-订单支付流程" tabindex="-1">3. 时序图示例：订单支付流程 <a class="header-anchor" href="#_3-时序图示例-订单支付流程" aria-label="Permalink to &quot;3. 时序图示例：订单支付流程&quot;">​</a></h3><pre class="mermaid mermaid-44">sequenceDiagram
+    autonumber
+    actor User as 用户
+    participant App as 客户端应用
+    participant OrderSys as 订单系统
+    participant PaymentGW as 支付网关
+
+    User-&gt;&gt;App: 点击支付
+    activate App
+    App-&gt;&gt;OrderSys: 创建订单请求
+    activate OrderSys
+    OrderSys--&gt;&gt;App: 返回订单详情
+    deactivate OrderSys
+
+    App-&gt;&gt;PaymentGW: 发起支付请求
+    activate PaymentGW
+    PaymentGW--&gt;&gt;PaymentGW: 验证支付信息
+    PaymentGW--&gt;&gt;App: 返回支付结果
+    deactivate PaymentGW
+
+    alt 支付成功
+        App-&gt;&gt;User: 显示支付成功页
+    else 支付失败
+        App-&gt;&gt;User: 显示重试按钮
+    end
+    deactivate App</pre><h3 id="_4-应用场景" tabindex="-1">4. 应用场景 <a class="header-anchor" href="#_4-应用场景" aria-label="Permalink to &quot;4. 应用场景&quot;">​</a></h3><ul><li><strong>详细设计</strong>：在编码前理清复杂的对象交互逻辑，特别是跨系统的接口调用。</li><li><strong>API 设计</strong>：展示客户端与服务端、微服务之间的调用时序。</li><li><strong>排错分析</strong>：通过绘制时序图复现 Bug 产生的交互路径。</li></ul><h2 id="_3-4-活动图-activity-diagram-业务流程建模" tabindex="-1">3.4 活动图（Activity Diagram）：业务流程建模 <a class="header-anchor" href="#_3-4-活动图-activity-diagram-业务流程建模" aria-label="Permalink to &quot;3.4 活动图（Activity Diagram）：业务流程建模&quot;">​</a></h2><p>活动图是 UML 中用于描述系统动态行为的重要图表，主要用于展现<strong>工作流（Workflow）</strong>、<strong>业务流程</strong>或<strong>代码执行流程</strong>。它类似于传统的流程图，但增加了对**并发（Concurrency）**的支持。</p><h3 id="_1-核心元素-1" tabindex="-1">1. 核心元素 <a class="header-anchor" href="#_1-核心元素-1" aria-label="Permalink to &quot;1. 核心元素&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">元素</th><th style="text-align:left;">图形符号</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>初始节点 (Initial Node)</strong></td><td style="text-align:left;">实心圆 ●</td><td style="text-align:left;">流程的开始。</td></tr><tr><td style="text-align:left;"><strong>活动/动作 (Action)</strong></td><td style="text-align:left;">圆角矩形</td><td style="text-align:left;">具体的执行步骤或操作。</td></tr><tr><td style="text-align:left;"><strong>控制流 (Control Flow)</strong></td><td style="text-align:left;">带箭头的实线 →</td><td style="text-align:left;">执行顺序。</td></tr><tr><td style="text-align:left;"><strong>决策节点 (Decision)</strong></td><td style="text-align:left;">菱形 ◇</td><td style="text-align:left;">条件判断，产生分支。</td></tr><tr><td style="text-align:left;"><strong>合并节点 (Merge)</strong></td><td style="text-align:left;">菱形 ◇</td><td style="text-align:left;">多个分支路径汇合（不等待，谁到谁走）。</td></tr><tr><td style="text-align:left;"><strong>分叉节点 (Fork)</strong></td><td style="text-align:left;">粗黑线/粗条 ▬</td><td style="text-align:left;">将一个流分为多个并发流。</td></tr><tr><td style="text-align:left;"><strong>汇合节点 (Join)</strong></td><td style="text-align:left;">粗黑线/粗条 ▬</td><td style="text-align:left;">等待所有并发流到达后，才继续执行。</td></tr><tr><td style="text-align:left;"><strong>结束节点 (Final Node)</strong></td><td style="text-align:left;">同心圆 ◉</td><td style="text-align:left;">流程的结束。</td></tr></tbody></table><h3 id="_2-简单活动图示例" tabindex="-1">2. 简单活动图示例 <a class="header-anchor" href="#_2-简单活动图示例" aria-label="Permalink to &quot;2. 简单活动图示例&quot;">​</a></h3><pre class="mermaid mermaid-45">flowchart TD
+    Start((Start)) --&gt; Input[输入用户名密码]
+    Input --&gt; Validate{验证是否通过?}
+
+    Validate -- Yes --&gt; LoginSuccess[登录成功]
+    Validate -- No --&gt; ShowError[提示错误]
+
+    ShowError --&gt; Input
+    LoginSuccess --&gt; End(((End)))</pre><h3 id="_3-泳道图-swimlanes" tabindex="-1">3. 泳道图（Swimlanes） <a class="header-anchor" href="#_3-泳道图-swimlanes" aria-label="Permalink to &quot;3. 泳道图（Swimlanes）&quot;">​</a></h3><p><strong>泳道图</strong>不是一种独立的图，而是活动图的一种 <strong>分区（Partition）</strong> 表现形式。</p><ul><li><strong>定义</strong>：通过垂直或水平的线条将活动图划分为若干区域（泳道）。</li><li><strong>作用</strong>：明确每个活动是由<strong>谁</strong>（哪个角色、部门、系统或类）负责执行的。</li><li><strong>结构</strong>：每个泳道代表一个责任主体。</li></ul><h4 id="泳道图示例-请假审批流程" tabindex="-1">泳道图示例：请假审批流程 <a class="header-anchor" href="#泳道图示例-请假审批流程" aria-label="Permalink to &quot;泳道图示例：请假审批流程&quot;">​</a></h4><p>以下示例展示了通过互联网访问摄像机监视设备并显示摄像机视图功能的泳道图：</p><p><img src="`+e+'" alt="alt text"></p><h3 id="_4-应用场景-1" tabindex="-1">4. 应用场景 <a class="header-anchor" href="#_4-应用场景-1" aria-label="Permalink to &quot;4. 应用场景&quot;">​</a></h3><ul><li><strong>业务建模</strong>：梳理跨部门的业务流程（如订单处理、采购流程），泳道图在此场景下非常有用。</li><li><strong>逻辑设计</strong>：描述复杂算法或方法的内部执行逻辑。</li><li><strong>并发分析</strong>：识别哪些任务可以并行处理，优化系统性能。</li></ul><h2 id="_3-5-用例图-use-case-diagram-需求建模" tabindex="-1">3.5 用例图（Use Case Diagram）：需求建模 <a class="header-anchor" href="#_3-5-用例图-use-case-diagram-需求建模" aria-label="Permalink to &quot;3.5 用例图（Use Case Diagram）：需求建模&quot;">​</a></h2><p>用例图主要用于描述系统的<strong>功能需求</strong>，展示外部参与者（Actor）与系统提供的功能（Use Case）之间的交互关系。它是从用户的角度来描述系统“做什么”，而不关心“怎么做”。</p><h3 id="_1-核心元素-2" tabindex="-1">1. 核心元素 <a class="header-anchor" href="#_1-核心元素-2" aria-label="Permalink to &quot;1. 核心元素&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">元素</th><th style="text-align:left;">图形符号</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>参与者 (Actor)</strong></td><td style="text-align:left;">小人图标 👤</td><td style="text-align:left;">与系统交互的外部实体（人、外部系统、设备）。</td></tr><tr><td style="text-align:left;"><strong>用例 (Use Case)</strong></td><td style="text-align:left;">椭圆 ⬭</td><td style="text-align:left;">系统提供的某个具体功能或服务。</td></tr><tr><td style="text-align:left;"><strong>系统边界 (System Boundary)</strong></td><td style="text-align:left;">矩形框 □</td><td style="text-align:left;">界定系统的范围，用例在框内，参与者在框外。</td></tr><tr><td style="text-align:left;"><strong>关联 (Association)</strong></td><td style="text-align:left;">实线 —</td><td style="text-align:left;">连接参与者与用例，表示两者有交互。</td></tr></tbody></table><h3 id="_2-用例之间的关系" tabindex="-1">2. 用例之间的关系 <a class="header-anchor" href="#_2-用例之间的关系" aria-label="Permalink to &quot;2. 用例之间的关系&quot;">​</a></h3><ul><li><strong>包含 (Include)</strong>：<code>&lt;&lt;include&gt;&gt;</code>，表示一个用例<strong>必须</strong>包含另一个用例的行为（强制依赖）。</li><li><strong>扩展 (Extend)</strong>：<code>&lt;&lt;extend&gt;&gt;</code>，表示一个用例在<strong>特定条件</strong>下可能会扩展另一个用例的行为（可选增强）。</li><li><strong>泛化 (Generalization)</strong>：空心三角箭头，表示一般与特殊的关系（如“支付”泛化为“微信支付”和“支付宝支付”）。</li></ul><h3 id="_3-简单用例图示例" tabindex="-1">3. 简单用例图示例 <a class="header-anchor" href="#_3-简单用例图示例" aria-label="Permalink to &quot;3. 简单用例图示例&quot;">​</a></h3><p><img src="'+l+`" alt="alt text"></p><h3 id="_4-应用场景-2" tabindex="-1">4. 应用场景 <a class="header-anchor" href="#_4-应用场景-2" aria-label="Permalink to &quot;4. 应用场景&quot;">​</a></h3><ul><li><strong>需求分析</strong>：帮助与客户沟通，明确系统需要提供哪些功能。</li><li><strong>系统边界定义</strong>：明确哪些功能属于系统内部，哪些属于外部交互。</li><li><strong>测试用例设计</strong>：作为编写功能测试用例的基础。</li></ul><h2 id="_3-6-状态图-state-diagram-对象生命周期" tabindex="-1">3.6 状态图（State Diagram）：对象生命周期 <a class="header-anchor" href="#_3-6-状态图-state-diagram-对象生命周期" aria-label="Permalink to &quot;3.6 状态图（State Diagram）：对象生命周期&quot;">​</a></h2><p>状态图（State Machine Diagram）用于描述一个特定对象的所有可能状态，以及引起状态转换的事件。它关注的是<strong>单个对象</strong>的生命周期。</p><h3 id="_1-核心元素-3" tabindex="-1">1. 核心元素 <a class="header-anchor" href="#_1-核心元素-3" aria-label="Permalink to &quot;1. 核心元素&quot;">​</a></h3><table tabindex="0"><thead><tr><th style="text-align:left;">元素</th><th style="text-align:left;">图形符号</th><th style="text-align:left;">说明</th></tr></thead><tbody><tr><td style="text-align:left;"><strong>状态 (State)</strong></td><td style="text-align:left;">圆角矩形</td><td style="text-align:left;">对象所处的条件或情况。</td></tr><tr><td style="text-align:left;"><strong>初始状态 (Initial State)</strong></td><td style="text-align:left;">实心圆 ●</td><td style="text-align:left;">对象生命周期的开始。</td></tr><tr><td style="text-align:left;"><strong>结束状态 (Final State)</strong></td><td style="text-align:left;">同心圆 ◉</td><td style="text-align:left;">对象生命周期的结束。</td></tr><tr><td style="text-align:left;"><strong>转换 (Transition)</strong></td><td style="text-align:left;">带箭头的实线 →</td><td style="text-align:left;">状态之间的切换，通常标记为 <code>事件 [守卫条件] / 动作</code>。</td></tr></tbody></table><h3 id="_2-状态图示例-订单状态流转" tabindex="-1">2. 状态图示例：订单状态流转 <a class="header-anchor" href="#_2-状态图示例-订单状态流转" aria-label="Permalink to &quot;2. 状态图示例：订单状态流转&quot;">​</a></h3><pre class="mermaid mermaid-46">stateDiagram-v2
+    [*] --&gt; 待支付
+    待支付 --&gt; 已支付 : 支付成功
+    待支付 --&gt; 已取消 : 取消订单/超时
+    已支付 --&gt; 待发货 : 审核通过
+    待发货 --&gt; 已发货 : 仓库发货
+    已发货 --&gt; 已完成 : 用户签收
+    已发货 --&gt; 退款中 : 用户拒收
+    退款中 --&gt; 已退款 : 处理完成
+    已取消 --&gt; [*]
+    已完成 --&gt; [*]
+    已退款 --&gt; [*]</pre><h3 id="_3-应用场景" tabindex="-1">3. 应用场景 <a class="header-anchor" href="#_3-应用场景" aria-label="Permalink to &quot;3. 应用场景&quot;">​</a></h3><ul><li><strong>对象生命周期建模</strong>：如订单、审批单、游戏角色等具有复杂状态流转的对象。</li><li><strong>嵌入式系统</strong>：描述硬件设备的控制逻辑。</li></ul><h2 id="_3-7-组件图与部署图-架构视图" tabindex="-1">3.7 组件图与部署图：架构视图 <a class="header-anchor" href="#_3-7-组件图与部署图-架构视图" aria-label="Permalink to &quot;3.7 组件图与部署图：架构视图&quot;">​</a></h2><p>这两类图主要用于系统的<strong>实现视图</strong>和<strong>部署视图</strong>。</p><h3 id="_1-组件图-component-diagram" tabindex="-1">1. 组件图 (Component Diagram) <a class="header-anchor" href="#_1-组件图-component-diagram" aria-label="Permalink to &quot;1. 组件图 (Component Diagram)&quot;">​</a></h3><p>描述系统中软件组件（如源代码文件、库、可执行文件）及其相互依赖关系。</p><ul><li><strong>组件 (Component)</strong>：矩形，左侧带有两个小矩形（UML 1.x）或右上角有组件图标（UML 2.x）。</li><li><strong>接口 (Interface)</strong>： <ul><li><strong>提供接口 (Provided Interface)</strong>：棒棒糖形状（圆圈+直线），表示组件提供的服务。</li><li><strong>请求接口 (Required Interface)</strong>：半圆+直线，表示组件需要的服务。</li></ul></li></ul><h3 id="_2-部署图-deployment-diagram" tabindex="-1">2. 部署图 (Deployment Diagram) <a class="header-anchor" href="#_2-部署图-deployment-diagram" aria-label="Permalink to &quot;2. 部署图 (Deployment Diagram)&quot;">​</a></h3><p>描述系统的硬件拓扑结构以及软件在硬件上的部署情况。</p><ul><li><strong>节点 (Node)</strong>：立方体，表示硬件设备（如服务器、手机）或执行环境（如 Tomcat、Docker 容器）。</li><li><strong>制品 (Artifact)</strong>：部署在节点上的软件文件（如 .jar, .war, .exe）。</li></ul><h3 id="_3-部署图示例" tabindex="-1">3. 部署图示例 <a class="header-anchor" href="#_3-部署图示例" aria-label="Permalink to &quot;3. 部署图示例&quot;">​</a></h3><pre class="mermaid mermaid-47">graph TD
+    subgraph Client [&quot;客户端 PC/手机&quot;]
+        Browser[&quot;浏览器 / App&quot;]
+    end
+
+    subgraph Server [&quot;应用服务器&quot;]
+        WebSrv[&quot;Web Server (Nginx)&quot;]
+        AppSrv[&quot;App Server (Spring Boot)&quot;]
+    end
+
+    subgraph DB [&quot;数据库服务器&quot;]
+        MySQL[(&quot;MySQL Database&quot;)]
+    end
+
+    Browser -- HTTP/HTTPS --&gt; WebSrv
+    WebSrv -- 反向代理 --&gt; AppSrv
+    AppSrv -- JDBC --&gt; MySQL</pre><h2 id="_3-8-如何用-uml-表达设计模式" tabindex="-1">3.8 如何用 UML 表达设计模式？ <a class="header-anchor" href="#_3-8-如何用-uml-表达设计模式" aria-label="Permalink to &quot;3.8 如何用 UML 表达设计模式？&quot;">​</a></h2><p>设计模式本质上是<strong>类与类之间关系的特定组合</strong>。掌握了类图中的六种关系，就能轻松读懂设计模式。</p><ul><li><strong>继承/实现</strong>：定义了模式的骨架（如策略模式的 Strategy 接口，模板方法模式的抽象类）。</li><li><strong>聚合/组合</strong>：定义了对象的组装方式（如装饰器模式中 Decorator 持有 Component，组合模式中树形结构）。</li><li><strong>关联/依赖</strong>：定义了对象的交互方式（如观察者模式中 Subject 持有 Observer 列表）。</li></ul><p>在后续章节介绍具体设计模式时，我们将大量使用 <strong>类图</strong> 来展示模式结构，用 <strong>时序图</strong> 来展示模式的动态交互。</p>`,144)]))}const u=a(r,[["render",o]]);export{m as __pageData,u as default};
